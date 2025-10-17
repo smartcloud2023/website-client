@@ -25,7 +25,7 @@ jobs:
 
     - name: Build, Tag, and Push Docker Image
       run: |
-        IMAGE_URI=${{ secrets.REGISTRY_NAME }}/elearning:$GITHUB_RUN_NUMBER
+        IMAGE_URI=${{ secrets.REGISTRY_NAME }}/elearning
         IMAGE_URL_2=696035274327.dkr.ecr.us-east-1.amazonaws.com/elearning-hub:$GITHUB_RUN_NUMBER
         docker build -t $IMAGE_URI .
         docker tag $IMAGE_URI 
