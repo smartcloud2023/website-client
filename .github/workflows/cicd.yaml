@@ -41,7 +41,7 @@ jobs:
         GIT_PASSWORD: ${{ secrets.GIT_PASSWORD }}
       run: |
         git clone https://${GIT_USERNAME}:${GIT_PASSWORD}@github.com/digitalwitchdemo/kubernetes-manifest.git
-        cd kubernetes-manifest/eLearning-hub-yaml
+        cd kubernetes-manifest/elearning-hub
         cat deployment.yaml
 
         sed -i "s+696035274327.dkr.ecr.us-east-1.amazonaws.com/elearning-hub:.*+696035274327.dkr.ecr.us-east-1.amazonaws.com/elearning-hub:$GITHUB_RUN_NUMBER+g" deployment.yaml
