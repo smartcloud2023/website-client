@@ -27,7 +27,6 @@ jobs:
       run: |
         IMAGE_URI=696035274327.dkr.ecr.us-east-1.amazonaws.com/elearning-hub:$GITHUB_RUN_NUMBER
         docker build -t $IMAGE_URI .
-        docker tag $IMAGE_URI 
         docker push $IMAGE_URI
 
 
